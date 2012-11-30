@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Msi\Bundle\MenuBundle\Entity\Menu;
+use Msi\Bundle\CmfBundle\Entity\Menu;
 
 class LoadMenuData extends AbstractFixture implements ContainerAwareInterface, OrderedFixtureInterface
 {
@@ -21,12 +21,11 @@ class LoadMenuData extends AbstractFixture implements ContainerAwareInterface, O
 
     public function load(ObjectManager $manager)
     {
-        $transClass = 'Msi\Bundle\MenuBundle\Entity\MenuTranslation';
+        $transClass = 'Msi\Bundle\CmfBundle\Entity\MenuTranslation';
         // ADMIN MENU
         // root
         $root = new Menu();
         $root->createTranslations($transClass, array('fr'));
-        $root->setIsSuperAdmin(true);
         $root->getTranslation()->setPublished(true)->setName('admin');
         $manager->persist($root);
         $manager->flush();
@@ -53,7 +52,7 @@ class LoadMenuData extends AbstractFixture implements ContainerAwareInterface, O
         // menu
         $menu = new Menu();
         $menu->createTranslations($transClass, array('fr'));
-        $menu->getTranslation()->setRoute('@msi_menu_menu_root_admin_index');
+        $menu->getTranslation()->setRoute('@msi_cmf_menu_root_admin_index');
         $menu->setParent($root);
         $menu->getTranslation()->setPublished(true)->setName('Menus');
         $manager->persist($menu);
@@ -66,14 +65,14 @@ class LoadMenuData extends AbstractFixture implements ContainerAwareInterface, O
             // pages
             $menu = new Menu();
             $menu->createTranslations($transClass, array('fr'));
-            $menu->getTranslation()->setRoute('@msi_page_page_admin_index');
+            $menu->getTranslation()->setRoute('@msi_cmf_page_admin_index');
             $menu->setParent($content);
             $menu->getTranslation()->setPublished(true)->setName('Pages');
             $manager->persist($menu);
             // blocks
             $menu = new Menu();
             $menu->createTranslations($transClass, array('fr'));
-            $menu->getTranslation()->setRoute('@msi_page_page_block_admin_index');
+            $menu->getTranslation()->setRoute('@msi_cmf_page_block_admin_index');
             $menu->setParent($content);
             $menu->getTranslation()->setPublished(true)->setName('Blocs');
             $manager->persist($menu);
