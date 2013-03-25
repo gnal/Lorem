@@ -8,8 +8,6 @@ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Msi\Bundle\CmfBundle\Entity\Site;
-
 class LoadSiteData extends AbstractFixture implements ContainerAwareInterface, OrderedFixtureInterface
 {
     protected $container;
@@ -23,16 +21,16 @@ class LoadSiteData extends AbstractFixture implements ContainerAwareInterface, O
 
     public function load(ObjectManager $manager)
     {
-        $site = new Site();
-        $site->setName('Multitour');
+        $site = $this->siteManager->create();
+        $site->setHost('dev.mtlcuisine.com');
         $site->setEnabled(true);
-        $site->setIsDefault(true);
         $site->setLocale('fr');
         $site->setLocales(array(
-            'fr',
+            'fr', 'en',
         ));
-        $this->siteManager->createTranslations($site, array('fr'));
-        $site->getTranslation()->setBrand('Multitour');
+        $this->siteManager->createTranslations($site, array('fr', 'en'));
+        $site->getTranslation('en')->setBrand('MTL Cuisine');
+        $site->getTranslation('fr')->setBrand('MTL Cuisine');
         $this->addReference('site1', $site);
         $manager->persist($site);
         // FLUSH

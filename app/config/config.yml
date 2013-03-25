@@ -68,19 +68,18 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: Acme\Bundle\UserBundle\Entity\User
+    user_class: Acme\UserBundle\Entity\User
     group:
-        group_class: Msi\Bundle\UserBundle\Entity\Group
+        group_class: Msi\UserBundle\Entity\Group
 
 msi_cmf:
-    page:
-        layouts:
-            'LoremAppBundle::layout.html.twig': 'Default'
-    block:
-        actions:
-            'MsiCmfBundle::layout.html.twig': 'Default'
-        templates:
-            'MsiCmfBundle::layout.html.twig': 'Default'
-        slots:
-            content: Content
-            sidebar: Sidebar
+    site_class: Acme\AppBundle\Entity\Site
+    menu_class: Acme\AppBundle\Entity\Menu
+    page_class: Acme\AppBundle\Entity\Page
+    block_class: Acme\AppBundle\Entity\Block
+    page_layouts:
+        'AcmeAppBundle::layout.html.twig': 'Default'
+    block_slots:
+        content: Contenu
+    block_actions:
+        'AcmeAppBundle:SomeController:someAction': 'someAction'

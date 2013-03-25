@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Msi\Bundle\UserBundle\Entity\Group;
+use Msi\UserBundle\Entity\Group;
 
 class LoadGroupData extends AbstractFixture implements ContainerAwareInterface, OrderedFixtureInterface
 {
