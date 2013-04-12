@@ -22,15 +22,16 @@ class LoadSiteData extends AbstractFixture implements ContainerAwareInterface, O
     public function load(ObjectManager $manager)
     {
         $site = $this->siteManager->create();
-        $site->setHost('dev.mtlcuisine.com');
+        $site->setHost('dev.acme.com');
         $site->setEnabled(true);
+        $site->setIsDefault(true);
         $site->setLocale('fr');
         $site->setLocales(array(
             'fr', 'en',
         ));
         $this->siteManager->createTranslations($site, array('fr', 'en'));
-        $site->getTranslation('en')->setBrand('MTL Cuisine');
-        $site->getTranslation('fr')->setBrand('MTL Cuisine');
+        $site->getTranslation('en')->setBrand('Acme');
+        $site->getTranslation('fr')->setBrand('Acme');
         $this->addReference('site1', $site);
         $manager->persist($site);
         // FLUSH
