@@ -27,6 +27,7 @@ class AppKernel extends Kernel
             new Msi\CmfBundle\MsiCmfBundle(),
             new Msi\UserBundle\MsiUserBundle(),
             new Acme\UserBundle\AcmeUserBundle(),
+            new Rec\CoreBundle\RecCoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

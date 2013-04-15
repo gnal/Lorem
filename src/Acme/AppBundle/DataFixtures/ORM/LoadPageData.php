@@ -24,7 +24,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
         //home
         $page = $this->pageManager->create();
         $page->setHome(true);
-        $page->setTemplate('MtlMainBundle::layout.html.twig');
+        $page->setTemplate('RecCoreBundle::layout.html.twig');
         $this->pageManager->createTranslations($page, array('fr', 'en'));
         $page->getTranslation('en')->setTitle('lorem')->setPublished(true);
         $page->getTranslation('fr')->setTitle('Accueil')->setPublished(true);
@@ -34,7 +34,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
 
         //about
         $page = $this->pageManager->create();
-        $page->setTemplate('MtlMainBundle::layout.html.twig');
+        $page->setTemplate('RecCoreBundle::layout.html.twig');
         $this->pageManager->createTranslations($page, array('fr', 'en'));
         $page->getTranslation('en')->setTitle('lorem')->setPublished(true);
         $page->getTranslation('fr')->setTitle('à propos de nous')->setPublished(true);
@@ -44,7 +44,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
 
         //gift
         $page = $this->pageManager->create();
-        $page->setTemplate('MtlMainBundle::layout.html.twig');
+        $page->setTemplate('RecCoreBundle::layout.html.twig');
         $this->pageManager->createTranslations($page, array('fr', 'en'));
         $page->getTranslation('en')->setTitle('lorem')->setPublished(true);
         $page->getTranslation('fr')->setTitle('certificats cadeau')->setPublished(true);
@@ -54,7 +54,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
 
         //services
         $page = $this->pageManager->create();
-        $page->setTemplate('MtlMainBundle::layout.html.twig');
+        $page->setTemplate('RecCoreBundle::layout.html.twig');
         $this->pageManager->createTranslations($page, array('fr', 'en'));
         $page->getTranslation('en')->setTitle('lorem')->setPublished(true);
         $page->getTranslation('fr')->setTitle('nos services')->setPublished(true);
@@ -64,7 +64,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
 
         //reservation de gorupe
         $page = $this->pageManager->create();
-        $page->setTemplate('MtlMainBundle::layout.html.twig');
+        $page->setTemplate('RecCoreBundle::layout.html.twig');
         $this->pageManager->createTranslations($page, array('fr', 'en'));
         $page->getTranslation('en')->setTitle('lorem')->setPublished(true);
         $page->getTranslation('fr')->setTitle('réservations de groupe')->setPublished(true);

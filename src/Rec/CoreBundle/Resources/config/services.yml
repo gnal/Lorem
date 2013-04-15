@@ -1,0 +1,7 @@
+parameters:
+#    rec_core.example.class: Rec\CoreBundle\Example
+
+services:
+#    rec_core.example:
+#        class: %rec_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
