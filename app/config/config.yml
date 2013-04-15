@@ -73,10 +73,10 @@ fos_user:
         group_class: Msi\UserBundle\Entity\Group
 
 msi_cmf:
-    site_class: Acme\AppBundle\Entity\Site
-    menu_class: Acme\AppBundle\Entity\Menu
-    page_class: Acme\AppBundle\Entity\Page
-    block_class: Acme\AppBundle\Entity\Block
+    site_class: Acme\CmfBundle\Entity\Site
+    menu_class: Acme\CmfBundle\Entity\Menu
+    page_class: Acme\CmfBundle\Entity\Page
+    block_class: Acme\CmfBundle\Entity\Block
     page_layouts:
         'AcmeAppBundle::layout.html.twig': 'Default'
     block_slots:

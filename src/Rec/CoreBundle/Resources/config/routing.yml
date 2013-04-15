@@ -1,3 +1,0 @@
-rec_core_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: RecCoreBundle:Default:index }
