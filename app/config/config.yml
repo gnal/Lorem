@@ -71,6 +71,12 @@ fos_user:
     user_class: Acme\UserBundle\Entity\User
     group:
         group_class: Msi\UserBundle\Entity\Group
+    registration:
+        form:
+            type: msi_user_registration
+    profile:
+        form:
+            type: msi_user_profile
 
 msi_cmf:
     site_class: Acme\AppBundle\Entity\Site
