@@ -23,26 +23,14 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, O
         // superadmin
         $user = $userManager->createUser();
         $user
-            ->setUsername('superadmin')
-            ->setEmail('superadmin@superadmin.com')
+            ->setUsername('alexisjoubert@groupemsi.com')
+            ->setEmail('alexisjoubert@groupemsi.com')
             ->setPlainPassword('coding9966')
             ->setConfirmationToken(null)
             ->setEnabled(true)
             ->addRole('ROLE_SUPER_ADMIN')
         ;
         $this->addReference('user1', $user);
-        $userManager->updateUser($user);
-        // client
-        $user = $userManager->createUser();
-        $user
-            ->setUsername('client')
-            ->setEmail('client@client.com')
-            ->setPlainPassword('client')
-            ->setConfirmationToken(null)
-            ->setEnabled(true)
-            ->getGroups()->add($manager->merge($this->getReference('group1')))
-        ;
-        $this->addReference('user2', $user);
         $userManager->updateUser($user);
     }
 
