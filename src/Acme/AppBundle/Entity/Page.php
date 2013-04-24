@@ -24,6 +24,7 @@ class Page extends BasePage
 
     /**
      * @ORM\ManyToOne(targetEntity="Site")
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     protected $site;
 
