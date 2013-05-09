@@ -24,6 +24,7 @@ class Block extends BaseBlock
 
     /**
      * @ORM\OneToMany(targetEntity="BlockTranslation", mappedBy="object", cascade={"persist"})
+     * @ORM\OrderBy({"locale" = "ASC"})
      */
     protected $translations;
 

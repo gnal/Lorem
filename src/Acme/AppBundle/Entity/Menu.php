@@ -32,6 +32,7 @@ class Menu extends BaseMenu
 
     /**
      * @ORM\OneToMany(targetEntity="MenuTranslation", mappedBy="object", cascade={"persist"})
+     * @ORM\OrderBy({"locale" = "ASC"})
      */
     protected $translations;
 

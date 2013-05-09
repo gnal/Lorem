@@ -30,6 +30,7 @@ class Page extends BasePage
 
     /**
      * @ORM\OneToMany(targetEntity="PageTranslation", mappedBy="object", cascade={"persist"})
+     * @ORM\OrderBy({"locale" = "ASC"})
      */
     protected $translations;
 }

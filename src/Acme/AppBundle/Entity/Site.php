@@ -19,6 +19,7 @@ class Site extends BaseSite
 
     /**
      * @ORM\OneToMany(targetEntity="SiteTranslation", mappedBy="object", cascade={"persist"})
+     * @ORM\OrderBy({"locale" = "ASC"})
      */
     protected $translations;
 }
