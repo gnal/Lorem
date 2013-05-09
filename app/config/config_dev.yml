@@ -6,7 +6,7 @@ framework:
     profiler: { only_exceptions: false }
 
 web_profiler:
-    toolbar: false
+    toolbar: true
     intercept_redirects: false
 
 monolog:
@@ -22,5 +22,6 @@ monolog:
 assetic:
     use_controller: true
 
-#swiftmailer:
-#    delivery_address: me@example.com
+swiftmailer:
+    port: 1025
+    disable_delivery: false
