@@ -31,18 +31,18 @@ class Menu extends BaseMenu
     protected $children;
 
     /**
-     * @ORM\OneToMany(targetEntity="MenuTranslation", mappedBy="object", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity="MenuTranslation", mappedBy="object", cascade={"persist"})
      */
     protected $translations;
 
     /**
      * @ORM\ManyToOne(targetEntity="Page")
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     protected $page;
 
     /**
      * @ORM\ManyToMany(targetEntity="Msi\UserBundle\Entity\Group")
-     * )
      */
     protected $operators;
 }

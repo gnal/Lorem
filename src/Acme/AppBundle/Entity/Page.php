@@ -28,7 +28,7 @@ class Page extends BasePage
     protected $site;
 
     /**
-     * @ORM\OneToMany(targetEntity="PageTranslation", mappedBy="object", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity="PageTranslation", mappedBy="object", cascade={"persist"})
      */
     protected $translations;
 }

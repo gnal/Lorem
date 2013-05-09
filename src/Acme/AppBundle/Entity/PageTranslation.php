@@ -19,6 +19,7 @@ class PageTranslation extends BasePageTranslation
 
     /**
      * @ORM\ManyToOne(targetEntity="Page", inversedBy="translations")
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     protected $object;
 }

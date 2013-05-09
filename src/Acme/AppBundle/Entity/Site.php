@@ -18,7 +18,7 @@ class Site extends BaseSite
     protected $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="SiteTranslation", mappedBy="object", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity="SiteTranslation", mappedBy="object", cascade={"persist"})
      */
     protected $translations;
 }

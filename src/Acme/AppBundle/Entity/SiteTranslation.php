@@ -19,6 +19,7 @@ class SiteTranslation extends BaseSiteTranslation
 
     /**
      * @ORM\ManyToOne(targetEntity="Site", inversedBy="translations")
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     protected $object;
 }

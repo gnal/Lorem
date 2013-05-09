@@ -19,6 +19,7 @@ class MenuTranslation extends BaseMenuTranslation
 
     /**
      * @ORM\ManyToOne(targetEntity="Menu", inversedBy="translations")
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     protected $object;
 }

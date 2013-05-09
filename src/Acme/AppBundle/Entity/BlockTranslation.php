@@ -19,6 +19,7 @@ class BlockTranslation extends BaseBlockTranslation
 
     /**
      * @ORM\ManyToOne(targetEntity="Block", inversedBy="translations")
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     protected $object;
 }

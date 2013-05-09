@@ -23,13 +23,12 @@ class Block extends BaseBlock
     protected $pages;
 
     /**
-     * @ORM\OneToMany(targetEntity="BlockTranslation", mappedBy="object", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity="BlockTranslation", mappedBy="object", cascade={"persist"})
      */
     protected $translations;
 
     /**
      * @ORM\ManyToMany(targetEntity="Msi\UserBundle\Entity\Group")
-     * )
      */
     protected $operators;
 }
