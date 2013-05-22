@@ -23,53 +23,24 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
     {
         //home
         $page = $this->pageManager->create();
-        $page->setHome(true);
-        $page->setTemplate('RecCoreBundle::layout.html.twig');
+        $page->setTemplate('AcmeAppBundle::layout.html.twig');
         $this->pageManager->createTranslations($page, array('fr', 'en'));
-        $page->getTranslation('en')->setTitle('lorem')->setPublished(true);
-        $page->getTranslation('fr')->setTitle('Accueil')->setPublished(true);
+        $page->setPublished(true);
+        $page->getTranslation('en')->setTitle('lorem');
+        $page->getTranslation('fr')->setTitle('Accueil');
         $page->setSite($manager->merge($this->getReference('site1')));
         $this->addReference('page1', $page);
         $manager->persist($page);
 
         //about
         $page = $this->pageManager->create();
-        $page->setTemplate('RecCoreBundle::layout.html.twig');
+        $page->setTemplate('AcmeAppBundle::layout.html.twig');
         $this->pageManager->createTranslations($page, array('fr', 'en'));
-        $page->getTranslation('en')->setTitle('lorem')->setPublished(true);
-        $page->getTranslation('fr')->setTitle('à propos de nous')->setPublished(true);
+        $page->setPublished(true);
+        $page->getTranslation('en')->setTitle('about us');
+        $page->getTranslation('fr')->setTitle('à propos de nous');
         $page->setSite($manager->merge($this->getReference('site1')));
         $this->addReference('page2', $page);
-        $manager->persist($page);
-
-        //gift
-        $page = $this->pageManager->create();
-        $page->setTemplate('RecCoreBundle::layout.html.twig');
-        $this->pageManager->createTranslations($page, array('fr', 'en'));
-        $page->getTranslation('en')->setTitle('lorem')->setPublished(true);
-        $page->getTranslation('fr')->setTitle('certificats cadeau')->setPublished(true);
-        $page->setSite($manager->merge($this->getReference('site1')));
-        $this->addReference('page3', $page);
-        $manager->persist($page);
-
-        //services
-        $page = $this->pageManager->create();
-        $page->setTemplate('RecCoreBundle::layout.html.twig');
-        $this->pageManager->createTranslations($page, array('fr', 'en'));
-        $page->getTranslation('en')->setTitle('lorem')->setPublished(true);
-        $page->getTranslation('fr')->setTitle('nos services')->setPublished(true);
-        $page->setSite($manager->merge($this->getReference('site1')));
-        $this->addReference('page4', $page);
-        $manager->persist($page);
-
-        //reservation de gorupe
-        $page = $this->pageManager->create();
-        $page->setTemplate('RecCoreBundle::layout.html.twig');
-        $this->pageManager->createTranslations($page, array('fr', 'en'));
-        $page->getTranslation('en')->setTitle('lorem')->setPublished(true);
-        $page->getTranslation('fr')->setTitle('réservations de groupe')->setPublished(true);
-        $page->setSite($manager->merge($this->getReference('site1')));
-        $this->addReference('page5', $page);
         $manager->persist($page);
 
         // FLUSH

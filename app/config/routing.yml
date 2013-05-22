@@ -1,3 +1,7 @@
+msi_page_home:
+    pattern: /{_locale}/
+    defaults: { _controller: MsiCmfBundle:Page:show }
+
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
