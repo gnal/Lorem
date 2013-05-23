@@ -86,6 +86,8 @@ msi_cmf:
     page_layouts:
         'AcmeDemoBundle::layout.html.twig': 'Default'
     block_slots:
-        content: Contenu
+        content_top: au-dessus du contenu
+        content_bottom: au-dessous du contenu
+        footer: pied de page
     block_actions:
         'AcmeAppBundle:SomeController:someAction': 'someAction'
