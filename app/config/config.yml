@@ -84,7 +84,7 @@ msi_cmf:
     page_class: Acme\AppBundle\Entity\Page
     block_class: Acme\AppBundle\Entity\Block
     page_layouts:
-        'AcmeAppBundle::layout.html.twig': 'Default'
+        'AcmeDemoBundle::layout.html.twig': 'Default'
     block_slots:
         content: Contenu
     block_actions:
