@@ -1,6 +1,10 @@
-acme_demo:
-    resource: "@AcmeDemoBundle/Resources/config/routing.yml"
-    prefix:   /
+homepage:
+    pattern:  /{_locale}/
+    defaults: { _controller: AcmeDemoBundle:Default:homepage }
+    requirements:
+        _locale: fr|en
+
+# fos_user
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
@@ -20,6 +24,8 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
+
+# msi_cmf
 
 msi_cmf_routing:
     resource: "@MsiCmfBundle/Resources/config/routing/routing.yml"

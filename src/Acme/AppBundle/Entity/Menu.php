@@ -21,11 +21,12 @@ class Menu extends BaseMenu
     /**
      * @Gedmo\TreeParent
      * @ORM\ManyToOne(targetEntity="Menu", inversedBy="children")
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     protected $parent;
 
     /**
-     * @ORM\OneToMany(targetEntity="Menu", mappedBy="parent", cascade={"remove"})
+     * @ORM\OneToMany(targetEntity="Menu", mappedBy="parent")
      * @ORM\OrderBy({"lft" = "ASC"})
      */
     protected $children;
