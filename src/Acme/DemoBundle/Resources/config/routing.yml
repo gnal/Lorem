@@ -1,5 +1,0 @@
-homepage:
-    pattern:  /{_locale}/
-    defaults: { _controller: AcmeDemoBundle:Default:homepage }
-    requirements:
-        _locale: fr|en

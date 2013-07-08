@@ -12,6 +12,8 @@ use FOS\UserBundle\Entity\User as BaseUser;
  */
 class User extends BaseUser
 {
+    use \Msi\CmfBundle\Doctrine\Extension\Model\SoftDeletable;
+
     /**
      * @ORM\Column(type="integer")
      * @ORM\Id
