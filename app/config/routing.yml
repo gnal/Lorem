@@ -27,10 +27,10 @@ fos_user_change_password:
 
 # msi_cmf
 
-msi_cmf_routing:
-    resource: "@MsiCmfBundle/Resources/config/routing/routing.yml"
-    prefix: /
-
 msi_cmf_loader:
     resource: .
     type: msi_cmf
+
+msi_cmf_routing:
+    resource: "@MsiCmfBundle/Resources/config/routing/routing.yml"
+    prefix: /

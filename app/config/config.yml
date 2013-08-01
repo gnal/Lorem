@@ -78,14 +78,10 @@ fos_user:
         form:
             type: msi_user_profile
 
-msi_cmf:
-    site_class: Acme\AppBundle\Entity\Site
-    menu_class: Acme\AppBundle\Entity\Menu
-    page_class: Acme\AppBundle\Entity\Page
-    block_class: Acme\AppBundle\Entity\Block
+msi_admin:
     page_layouts:
         'AcmeDemoBundle::layout.html.twig': 'Default'
-        'MsiCmfBundle:Layout:blank.html.twig': 'Blank'
+        'MsiAdminBundle:Layout:blank.html.twig': 'Blank'
     block_slots:
         content_top: au-dessus du contenu
         content_bottom: au-dessous du contenu

@@ -24,7 +24,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
 
-            new Msi\CmfBundle\MsiCmfBundle(),
+            new Msi\AdminBundle\MsiAdminBundle(),
             new Msi\UserBundle\MsiUserBundle(),
 
             new Acme\UserBundle\AcmeUserBundle(),
