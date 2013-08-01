@@ -18,7 +18,7 @@ class LoadMenuData extends AbstractFixture implements ContainerAwareInterface, O
     public function setContainer(ContainerInterface $dic = null)
     {
         $this->dic = $dic;
-        $this->menuManager = $this->dic->get('msi_cmf.menu_root_manager');
+        $this->menuManager = $this->dic->get('msi_admin.menu_root_manager');
     }
 
     public function load(ObjectManager $manager)
@@ -33,7 +33,7 @@ class LoadMenuData extends AbstractFixture implements ContainerAwareInterface, O
             // sites
             $menu = $this->menuManager->create();
             $this->menuManager->createTranslations($menu, array('fr'));
-            $menu->getTranslation()->setRoute('@msi_cmf_site_admin_list');
+            $menu->getTranslation()->setRoute('@msi_admin_site_admin_list');
             $menu->setParent($root);
             $menu->getTranslation()->setName('Sites');
             $manager->persist($menu);
@@ -60,7 +60,7 @@ class LoadMenuData extends AbstractFixture implements ContainerAwareInterface, O
             // menu
             $menu = $this->menuManager->create();
             $this->menuManager->createTranslations($menu, array('fr'));
-            $menu->getTranslation()->setRoute('@msi_cmf_menu_root_admin_list');
+            $menu->getTranslation()->setRoute('@msi_admin_menu_root_admin_list');
             $menu->setParent($root);
             $menu->getTranslation()->setName('Menus');
             $manager->persist($menu);
