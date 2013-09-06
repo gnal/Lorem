@@ -23,9 +23,9 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, O
         // superadmin
         $user = $userManager->createUser();
         $user
-            ->setUsername('alexisjoubert@groupemsi.com')
-            ->setEmail('alexisjoubert@groupemsi.com')
-            ->setPlainPassword('123456')
+            ->setUsername('manager@zonemsi.com')
+            ->setEmail('manager@zonemsi.com')
+            ->setPlainPassword('admin')
             ->setConfirmationToken(null)
             ->setEnabled(true)
             ->addRole('ROLE_SUPER_ADMIN')

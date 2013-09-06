@@ -16,7 +16,7 @@ class LoadSiteData extends AbstractFixture implements ContainerAwareInterface, O
     public function setContainer(ContainerInterface $container = null)
     {
         $this->container = $container;
-        $this->siteManager = $container->get('msi_admin.site_manager');
+        $this->siteManager = $container->get('msi_cms.site_manager');
     }
 
     public function load(ObjectManager $manager)
@@ -29,9 +29,6 @@ class LoadSiteData extends AbstractFixture implements ContainerAwareInterface, O
         $site->setLocales(array(
             'fr', 'en',
         ));
-        $this->siteManager->createTranslations($site, array('fr', 'en'));
-        $site->getTranslation('en')->setBrand('Acme');
-        $site->getTranslation('fr')->setBrand('Acme');
         $this->addReference('site1', $site);
         $manager->persist($site);
         // FLUSH
