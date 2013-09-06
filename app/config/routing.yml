@@ -1,6 +1,6 @@
 homepage:
     pattern:  /{_locale}/
-    defaults: { _controller: AcmeDemoBundle:Default:homepage }
+    defaults: { _controller: DadaDadaBundle:Home:index }
     requirements:
         _locale: fr|en
 
@@ -31,6 +31,10 @@ msi_admin_loader:
     resource: .
     type: msi_admin
 
-msi_admin_routing:
+msi_admin:
     resource: "@MsiAdminBundle/Resources/config/routing/routing.yml"
+    prefix: /
+
+msi_cms:
+    resource: "@MsiCmsBundle/Resources/config/routing.yml"
     prefix: /

@@ -77,14 +77,11 @@ fos_user:
     profile:
         form:
             type: msi_user_profile
+    change_password:
+        form:
+            type: msi_user_change_password
 
-msi_admin:
+msi_cms:
+    page_class: Dada\CmsBundle\Entity\Page
     page_layouts:
-        'AcmeDemoBundle::layout.html.twig': 'Default'
-        'MsiAdminBundle:Layout:blank.html.twig': 'Blank'
-    block_slots:
-        content_top: au-dessus du contenu
-        content_bottom: au-dessous du contenu
-        footer: pied de page
-    block_actions:
-        'AcmeAppBundle:SomeController:someAction': 'someAction'
+        'DadaDadaBundle::layout.html.twig': 'Default'
