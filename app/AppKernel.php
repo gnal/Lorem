@@ -29,6 +29,8 @@ class AppKernel extends Kernel
             new Msi\UserBundle\MsiUserBundle(),
 
             new Acme\AppBundle\AcmeAppBundle(),
+            new Acme\CmsBundle\AcmeCmsBundle(),
+            new Acme\UserBundle\AcmeUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

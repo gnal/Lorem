@@ -68,7 +68,7 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: Msi\UserBundle\Entity\User
+    user_class: Acme\UserBundle\Entity\User
     group:
         group_class: Msi\UserBundle\Entity\Group
     registration:
@@ -82,6 +82,6 @@ fos_user:
             type: msi_user_change_password
 
 msi_cms:
-    page_class: Dada\CmsBundle\Entity\Page
+    page_class: Acme\CmsBundle\Entity\Page
     page_layouts:
         'DadaDadaBundle::layout.html.twig': 'Default'
